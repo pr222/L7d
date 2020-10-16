@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e1d5b7;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Stil för tabellen ----- */
+
+table {
+    background-color: aliceblue;
+    border-collapse: collapse;
+    box-shadow: 10px 10px 15px #666;
+}
+
+caption {
+    caption-side: bottom;
+    margin-top: 1em;
+    font-style: italic;
+    color: #651010;
+}
+
+th, td {
+    border: 2px solid #FF1e2F;
+    padding: 6px;
+    text-align: left;
+}
+
+th {
+    background-color: antiquewhite;
+    color: brown;
+    vertical-align: bottom;
+}
+
+tr:nth-of-type(even) {
+    background-color: cornsilk;
+}
+
+@media screen and (max-width: 500px) {
+    table{
+        box-shadow: none;
+    }
+    
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    th, td {
+        flex-shrink: 1;
+        flex-grow: 1;
+        border-width: 1px;
+        padding: 4px;
+    }
+
+    tr:nth-of-type(2) {
+        display: none;
+    }
+}
